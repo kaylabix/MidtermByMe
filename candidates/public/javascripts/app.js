@@ -46,7 +46,7 @@ function MainCtrl($scope, $http) //controller
         return $http.put('/candidates' + candidate._id + '/upvote')
         .success(function(data){
             console.log("upvote worked");
-            candidate.upvotes += 1;
+            candidate.upvote += 1;
         });
     };
 
