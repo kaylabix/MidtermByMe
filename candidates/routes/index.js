@@ -32,19 +32,16 @@ router.post('/candidates', function(req, res, next) {
 //deleting a candidate
 router.delete('/candidates/:id', function(req, res, next) {
   console.log('in delete');
-  var candidateID = req.params.id;
-  console.log(candidateID);
-  var candidate = Candidate.findByIdAndRemove(candidateID, function(err, candidate)
-{
-  if(err)
-  {
-    return next(err);
-  }
+  Candidate.remove({_id: req.body.id}, function(err){ 
+    if(err)
+    {
+      return next(err);
+    }
 
   console.log(res);
 });
 
-})
+
 
 
 
