@@ -37,6 +37,7 @@ router.delete('/candidates/:id', function(req, res, next) {
     {
       return next(err);
     }
+  });
 
   console.log(res);
 });
