@@ -31,7 +31,7 @@
             <h1>Current Products</h1>
             <div ng-repeat="product in products | orderBy:['Name']"> <!--Basically a for each loop, ordered in decending order by votes first then by Name -->
                 <span class="glyphicon glyphicon-remove" ng-click="deleteProduct(product)"></span> <!-- ng-click is an onClick listener basically but fancier-->
-                {{product.Name}} - price {{product.price}} - ordered: {{product.ordered}} <img width:"50px" height:"50px" ng-show="product.picURL" ng-src="{{product.picURL}}"><!--Angular knows that stuff in the {{}} are for it to evaluate-->
+                {{product.Name}}  Price: ${{product.price}} - ordered: {{product.ordered}} <img width:"50px" height:"50px" ng-show="product.picURL" ng-src="{{product.picURL}}"><!--Angular knows that stuff in the {{}} are for it to evaluate-->
             </div>
         </div>
     </body>
