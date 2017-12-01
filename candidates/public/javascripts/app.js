@@ -14,7 +14,7 @@ function MainCtrl($scope, $http) //controller
     $scope.upvote = upvote;
     $scope.addCandidate = addCandidate;
    // $scope.incrementUpvotes = incrementUpvotes;
-    $scope.delete = deleteCandidate;
+    $scope.deleteCandidate = deleteCandidate;
 
     //variables
     $scope.candidates = [];
@@ -65,6 +65,7 @@ function MainCtrl($scope, $http) //controller
 
     function deleteCandidate(candidate)
     {
+        console.log("in delete");
         console.log("Deleting Name " + candidate.Name+" ID "+candidate._id);
         $http.delete('/candidates/' + candidate._id)
         .success(function(data){
