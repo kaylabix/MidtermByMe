@@ -14,6 +14,7 @@ function MainCtrl($scope, $http) //controller
     $scope.order = order;
     $scope.addProduct = addProduct;
     $scope.deleteProduct = deleteProduct;
+    
 
     // //variables
     $scope.products = [];
@@ -54,7 +55,7 @@ function MainCtrl($scope, $http) //controller
 
     function addProduct()
     {
-        var newObj = {Name:$scope.prodName, price: $scope.price, imageURL:$scope.picURL, ordered: 0};
+        var newObj = {Name:$scope.prodName, price: $scope.price, picURL:$scope.picURL, ordered: 0};
         console.log(newObj);
         create(newObj);
         $scope.getAll();

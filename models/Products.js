@@ -5,7 +5,7 @@ var ProductSchema = new mongoose.Schema({
     selected: Boolean,
     ordered: {type: Number, default: 0},
     price: Number,
-    imageURL: String,
+    picURL: String,
 });
 
 // CandidateSchema.methods.upvote = function(cb) {
