@@ -16,13 +16,11 @@ router.get('/candidates', function(req, res, next) {
 
 //adding a new candidate to candidates
 router.post('/candidates', function(req, res, next) {
-  console.log("in candidate")
   var candidate = new Candidate(req.body);
   console.log(candidate);
   candidate.save(function(err, candidate){
     if(err)
     {
-      console.log("in candidate error");
       return next(err);
     }
     res.json(candidate);
@@ -41,11 +39,5 @@ router.delete('/candidates/:id', function(req, res, next) {
 
   console.log(res);
 });
-
-
-
-
-
-
 
 module.exports = router;
