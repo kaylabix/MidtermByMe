@@ -72,6 +72,8 @@ function MainCtrl($scope, $http) //controller
         .success(function(data){
             console.log("delete worked");
         });
+
+        $scope.getAll();
     }
 
     $scope.getAll();
