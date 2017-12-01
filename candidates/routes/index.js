@@ -45,7 +45,7 @@ router.put('/candidates/:id', function(req, res, next) {
     {
       return next(err);
     }
-    candidate.upvotes++;
+    candidate.upvote++;
     candidate.save(function(err){
       if(err)
       {
