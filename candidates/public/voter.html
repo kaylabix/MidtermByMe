@@ -11,13 +11,13 @@
             <h1>Voter Interface</h1>
             
             <h1> Current Candidates </h1>
-            <div ng-repeat="candidate in candidates | orderBy: 'Name'"> <!--For each loop, ordered by name-->
+            <div ng-repeat="candidate in candidates | orderBy:['Name']"> <!--For each loop, ordered by name-->
                 <input type="checkbox" ng-model="candidate.selected"> <!--sets the selected parameter of the candidate, two way communication-->
                 {{candidate.Name}}
             </div>
             <button ng-click="doVote()"> Submit Votes </button> <!--Click this and doVote() will get called-->
             <h1> Submitter Ballot </h1>
-            <div ng-repeat="candidate in ballot | orderby: 'Name'">  {{candidate.Name}} </div> <!--For each loop-->
+            <div ng-repeat="candidate in ballot |  orderBy:['Name']">  {{candidate.Name}} </div> <!--For each loop-->
         </div>
     </body>
 </html>
