@@ -17,7 +17,7 @@ router.get('/candidates', function(req, res, next) {
 //adding a new candidate to candidates
 router.post('/candidates', function(req, res, next) {
   console.log("in candidate")
-  var candidate = new Candidates(req.body);
+  var candidate = new Candidate(req.body);
   console.log(candidate);
   candidate.save(function(err, candidate){
     if(err)
