@@ -39,4 +39,8 @@ router.delete('/candidates/:id', function(req, res, next) {
   });
 });
 
+router.put('/candidates/:id', function(req, res, next) {
+  
+})
+
 module.exports = router;

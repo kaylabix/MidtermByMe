@@ -13,7 +13,6 @@ function MainCtrl($scope, $http) //controller
     $scope.doVote = doVote;
     $scope.upvote = upvote;
     $scope.addCandidate = addCandidate;
-   // $scope.incrementUpvotes = incrementUpvotes;
     $scope.deleteCandidate = deleteCandidate;
 
     //variables
@@ -37,14 +36,18 @@ function MainCtrl($scope, $http) //controller
     function doVote() //when click on submit votes, goes through each candidate to see if they have a true selected value (what are the value and key??)
     {
         console.log("In doVote")
-        angular.forEach($scope.candidates, function(value,key) {
-            if(value.selected)
-            {
-                $scope.upvote(value);
-                $scope.ballot.push(value);
-            }
-        });
+        // angular.forEach($scope.candidates, function(value,key) {
+        //     $scope.ballot = [];
+        //     if(value.selected)
+        //     {
+        //         $scope.upvote(value);
+        //         $scope.ballot.push(value);
+        //     }
+        // });
 
+        $scope.ballot = $scope.candidates.filter(function(candidate) {
+            return candidate.selected;
+        })
     };
 
     function upvote(candidate) 
