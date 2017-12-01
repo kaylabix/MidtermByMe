@@ -13,11 +13,11 @@
 
             <h1>Current Candidates</h1>
             <div ng-repeat="candidate in candidates | orderBy:['-votes','Name"> <!--Basically a for each loop, ordered in decending order by votes first then by Name -->
-                <span class="glyphicon glyphicon-remove" ng-click="delete(candidate)"></span> <!-- ng-click is an onClick listener basically but fancier-->
+                <span class="glyphicon glyphicon-remove" ng-click="deleteCandidate(candidate)"></span> <!-- ng-click is an onClick listener basically but fancier-->
                 {{candidate.Name}} - votes {{candidate.votes}} <!--Angular knows that stuff in the {{}} are for it to evaluate-->
             </div>
         </div>
     </body>
 </html>
 
-<!--Why are there two divs, and what is going on with the glyphicons? --> 
+<!--Why are there two divs, and what is going on with the glyphicons?--> 

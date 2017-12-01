@@ -22,15 +22,15 @@ function MainCtrl($scope, $http) //controller
 
     function getAll()  //get Mongoose database, if successful copy the data into the candidates array
     {
-        return $http.get('/voting').success(function(data){ 
+        return $http.get('/candidates').success(function(data){ 
             angular.copy(data, $scope.candidates);
         });
     };
 
     function create(candidate) //pushes the given candidate onto the candidates array in the Mongoose database
     {
-        return $http.post('/voting', candidate).success(function(data){
-            $scope.candidates.push(data);
+        return $http.post('/candidates', candidate).success(function(data){
+            $scope.candidates.push(candidate);
         });
     };
 
@@ -49,7 +49,7 @@ function MainCtrl($scope, $http) //controller
 
     function upvote(candidate) 
     {
-        return $http.put('/voting' + candidate._id + '/upvote')
+        return $http.put('/candidates' + candidate._id + '/upvote')
         .success(function(data){
             console.log("upvote worked");
             candidate.upvotes += 1;
@@ -61,14 +61,15 @@ function MainCtrl($scope, $http) //controller
         var newObj = {Name:$scope.formContent,votes:0};
     }
 
-    function incrementUpvotes()
-    {
-
-    }
-
     function deleteCandidate()
     {
-
+        console.log("Deleting Name " + candidate.Name+" ID "+candidate._id);
+        $http.delete('/candidates/' + candidate._id)
+        .success(function(data){
+            console.log("delete worked");
+        });
     }
+
+    scope.getAll();
 
 }
