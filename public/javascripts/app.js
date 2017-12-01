@@ -33,24 +33,24 @@ function MainCtrl($scope, $http) //controller
         });
     };
 
-    // function doVote() //when click on submit votes, goes through each candidate to see if they have a true selected value (what are the value and key??)
-    // {
+    function addToCart() //when click on submit votes, goes through each candidate to see if they have a true selected value (what are the value and key??)
+    {
 
-    //     $scope.ballot = $scope.candidates.filter(function(candidate) {
-    //         return candidate.selected;
-    //     })
-    //     $scope.ballot.forEach(upvote);
-    // };
+        $scope.cart = $scope.products.filter(function(product) {
+            return product.selected;
+        })
+        $scope.cart.forEach(order);
+    };
 
-    // function upvote(candidate) 
-    // {
-    //     console.log('in upvote')
-    //     return $http.put('/candidates/' + candidate._id)
-    //     .success(function(data){
-    //         console.log("upvote worked");
-    //         candidate.upvote += 1;
-    //     });
-    // };
+    function order(product) 
+    {
+        console.log('in upvote')
+        return $http.put('/products/' + product._id)
+        .success(function(data){
+            console.log("upvote worked");
+            product.ordered += 1;
+        });
+    };
 
     function addProduct()
     {
