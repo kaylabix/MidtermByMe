@@ -59,6 +59,7 @@ function MainCtrl($scope, $http) //controller
     function addCandidate()
     {
         var newObj = {Name:$scope.formContent,votes:0};
+        create(newObj);
     }
 
     function deleteCandidate()
