@@ -29,6 +29,13 @@ router.post('/candidates', function(req, res, next) {
   });
 });
 
+//deleting a candidate
+router.delete('/candidates/:id', function(req, res, next) {
+  var candidateID = req.params.id;
+  var candidate = Candidate.findById(candidateID);
+  candidate.delete();
+})
+
 
 
 
