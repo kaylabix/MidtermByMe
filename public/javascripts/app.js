@@ -60,7 +60,7 @@ function MainCtrl($scope, $http) //controller
         $scope.getAll();
     }
 
-    function deleteCProduct(product)
+    function deleteProduct(product)
     {
         console.log("in delete");
         console.log(product);
