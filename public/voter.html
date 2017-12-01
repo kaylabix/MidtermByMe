@@ -12,7 +12,7 @@
             
             <h1> Shopping Cart </h1>
             <div ng-repeat="product in products | orderBy:['Name']"> <!--For each loop, ordered by name-->
-                <input type="checkbox" ng-model="candidate.selected"> <!--sets the selected parameter of the candidate, two way communication-->
+                <input type="checkbox" ng-model="product.selected"> <!--sets the selected parameter of the candidate, two way communication-->
                 {{product.Name}} - price {{product.price}}
             </div>
             <button ng-click="addToCart()"> Submit Purchases </button> <!--Click this and doVote() will get called-->

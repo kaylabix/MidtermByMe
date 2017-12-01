@@ -44,7 +44,7 @@ function MainCtrl($scope, $http) //controller
 
     function order(product) 
     {
-        console.log('in upvote')
+        console.log("inside order");
         return $http.put('/products/' + product._id)
         .success(function(data){
             console.log("upvote worked");
