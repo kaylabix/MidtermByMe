@@ -63,7 +63,7 @@ function MainCtrl($scope, $http) //controller
         create(newObj);
     }
 
-    function deleteCandidate()
+    function deleteCandidate(candidate)
     {
         console.log("Deleting Name " + candidate.Name+" ID "+candidate._id);
         $http.delete('/candidates/' + candidate._id)
