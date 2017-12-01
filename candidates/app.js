@@ -4,10 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+require('./models/Candidates.js');
 var index = require('./routes/index');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/candidates');
-require('./models/Candidates.js');
+
 
 
 var app = express();
