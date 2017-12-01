@@ -9,7 +9,7 @@
         <div style="margin-left: 5em;">
             <h1> Administrative Interface </h1>
             <input type="text" ng-model="formContent"></input> <!--Gives a two way street between this and the webpage -->
-            <button ng-click-"addCandidate()">Add Candidate</button>
+            <button ng-click="addCandidate()">Add Candidate</button>
 
             <h1>Current Candidates</h1>
             <div ng-repeat="candidate in candidates | orderBy:['-votes','Name']"> <!--Basically a for each loop, ordered in decending order by votes first then by Name -->
