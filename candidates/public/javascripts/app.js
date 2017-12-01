@@ -43,6 +43,7 @@ function MainCtrl($scope, $http) //controller
 
     function upvote(candidate) 
     {
+        console.log('in upvote')
         return $http.put('/candidates' + candidate._id + '/upvote')
         .success(function(data){
             console.log("upvote worked");
