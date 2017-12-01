@@ -40,7 +40,22 @@ router.delete('/candidates/:id', function(req, res, next) {
 });
 
 router.put('/candidates/:id', function(req, res, next) {
-  
+  Candidate.findById({_id: req.params.id}, function(err, candidate){
+    if(err)
+    {
+      return next(err);
+    }
+    candidate.upvotes++;
+    candidate.save(function(err){
+      if(err)
+      {
+        return next(err);
+      }
+      res.send("success");
+    })
+   
+  });
+
 })
 
 module.exports = router;
