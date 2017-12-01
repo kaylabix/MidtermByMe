@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var CandidateSchema = new mongoose.Schema({
-    name: String,
+    Name: String,
     selected: Boolean,
     upvote: {type: Number, default: 0},
 });
@@ -11,4 +11,4 @@ CandidateSchema.methods.upvote = function(cb) {
     this.save(cb);
 };
 
-mongoose.model('Candidate', CandidateScheme);
+mongoose.model('Candidate', CandidateSchema);
