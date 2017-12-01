@@ -18,6 +18,7 @@
             <button ng-click="addToCart()"> Submit Purchases </button> <!--Click this and doVote() will get called-->
             <h1> Shopping Cart</h1>
             <div ng-repeat="product in cart |  orderBy:['Name']">  {{product.Name}} - price {{product.price}} {{product.picURL}}</div> <!--For each loop-->
+            <img src="https://static.pexels.com/photos/159541/wildlife-photography-pet-photography-dog-animal-159541.jpeg">
         </div>
     </body>
 </html>
