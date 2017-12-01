@@ -13,7 +13,7 @@ function MainCtrl($scope, $http) //controller
     $scope.doVote = doVote;
     $scope.upvote = upvote;
     $scope.addCandidate = addCandidate;
-    $scope.incrementUpvotes = incrementUpvotes;
+   // $scope.incrementUpvotes = incrementUpvotes;
     $scope.delete = deleteCandidate;
 
     //variables
