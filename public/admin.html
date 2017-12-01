@@ -8,9 +8,9 @@
     <body ng-app="shopping" ng-controller="MainCtrl"> <!-- Give Angular access to everything inside of this tag -->
         <div style="margin-left: 5em;">
             <h1> Store Management Interface </h1>
-            <input type="text" ng-model="prodName"></input> <!--Gives a two way street between this and the webpage -->
-            <input type = "text" ng-model="price"></input>
-            <input type = "text" ng-model="picURL"></input>
+            Product Name <input type="text" ng-model="prodName"></input> <!--Gives a two way street between this and the webpage -->
+            Price <input type = "text" ng-model="price"></input>
+            Picture URL <input type = "text" ng-model="picURL"></input>
             <button ng-click="addProduct()">Add Product</button>
 
             <h1>Current Products</h1>
