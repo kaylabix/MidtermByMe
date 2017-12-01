@@ -1,9 +1,10 @@
 var mongoose = require('mongoose');
 
-var CandidateSchema = new mongoose.Schema({
+var ProductSchema = new mongoose.Schema({
     Name: String,
     selected: Boolean,
-    upvote: {type: Number, default: 0},
+    price: {type: Number, default: 0},
+    imageURL: String,
 });
 
 // CandidateSchema.methods.upvote = function(cb) {
@@ -11,4 +12,4 @@ var CandidateSchema = new mongoose.Schema({
 //     this.save(cb);
 // };
 
-mongoose.model('Candidate', CandidateSchema);
+mongoose.model('Product', ProductSchema);
