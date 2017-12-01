@@ -40,7 +40,7 @@ router.delete('/candidates/:id', function(req, res, next) {
 });
 
 router.put('/candidates/:id', function(req, res, next) {
-  Candidate.findById({_id: req.params.id}, function(err, candidate){
+  Candidate.findById(req.params.id, function(err, candidate){
     if(err)
     {
       return next(err);
