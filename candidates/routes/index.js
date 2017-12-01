@@ -16,10 +16,12 @@ router.get('/candidates', function(req, res, next) {
 
 //adding a new candidate to candidates
 router.post('/candidates', function(req, res, next) {
+  console.log("in candidate")
   var candidate = new Candidates(req.body);
   candidate.save(function(err, candidate){
     if(err)
     {
+      console.log("in candidate error");
       return next(err);
     }
     console.log(candidate);
