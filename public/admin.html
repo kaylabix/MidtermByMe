@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Candidates</title> <!-- Sets the text on the tab -->
+        <title>Management</title> <!-- Sets the text on the tab -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
         <script src="javascripts/app.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -8,15 +8,15 @@
     <body ng-app="shopping" ng-controller="MainCtrl"> <!-- Give Angular access to everything inside of this tag -->
         <div style="margin-left: 5em;">
             <h1> Store Management Interface </h1>
-            <input type="text" ng-model="prodName">Product Name</input> <!--Gives a two way street between this and the webpage -->
-            <input type = "text" ng-model="price"> Price </input>
+            <input type="text" ng-model="prodName"></input> <!--Gives a two way street between this and the webpage -->
+            <input type = "text" ng-model="price"></input>
             <input type = "text" ng-model="picURL"> Picture URL</input>
-            <button ng-click="addProduct()">Add Candidate</button>
+            <button ng-click="addProduct()">Add Product</button>
 
-            <h1>Current Candidates</h1>
+            <h1>Current Products</h1>
             <div ng-repeat="product in products | orderBy:['Name']"> <!--Basically a for each loop, ordered in decending order by votes first then by Name -->
                 <span class="glyphicon glyphicon-remove" ng-click="deleteProduct(product)"></span> <!-- ng-click is an onClick listener basically but fancier-->
-                {{product.Name}} - votes {{product.price}} <!--Angular knows that stuff in the {{}} are for it to evaluate-->
+                {{product.Name}} - price {{product.price}} - ordered: {{product.ordered}} <!--Angular knows that stuff in the {{}} are for it to evaluate-->
             </div>
         </div>
     </body>

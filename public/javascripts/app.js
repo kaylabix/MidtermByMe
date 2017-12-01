@@ -54,7 +54,7 @@ function MainCtrl($scope, $http) //controller
 
     function addProduct()
     {
-        var newObj = {Name:$scope.prodName, price: 0, imageURL:$scope.imageURL};
+        var newObj = {Name:$scope.prodName, price: $scope.price, imageURL:$scope.imageURL, ordered: 0};
         console.log(newObj);
         create(newObj);
         $scope.getAll();

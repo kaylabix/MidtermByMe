@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 var ProductSchema = new mongoose.Schema({
     Name: String,
     selected: Boolean,
-    price: {type: Number, default: 0},
+    ordered: {type: Number, default: 0},
+    price: Number,
     imageURL: String,
 });
 
