@@ -70,6 +70,6 @@ function MainCtrl($scope, $http) //controller
         });
     }
 
-    scope.getAll();
+    $scope.getAll();
 
 }
