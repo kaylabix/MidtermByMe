@@ -18,7 +18,7 @@
             </div>
             <button ng-click="addToCart()"> Submit Purchases </button> <!--Click this and doVote() will get called-->
             <h1> Shopping Cart</h1>
-            <div ng-repeat="product in cart |  orderBy:['Name']">  {{product.Name}} - price {{product.price}} <img width:150px height:150px ng-show="product.picURL" ng-src="{{product.picURL}}"></div> <!--For each loop-->
+            <div ng-repeat="product in cart |  orderBy:['Name']">  {{product.Name}} - price {{product.price}} <img width:"150px" height:"150px" ng-show="product.picURL" ng-src="{{product.picURL}}"></div> <!--For each loop-->
         </div>
     </body>
 </html>
