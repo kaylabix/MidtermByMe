@@ -39,6 +39,7 @@ function MainCtrl($scope, $http) //controller
         $scope.ballot = $scope.candidates.filter(function(candidate) {
             return candidate.selected;
         })
+        $scope.ballot.forEach(upvote);
     };
 
     function upvote(candidate) 
