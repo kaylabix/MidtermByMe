@@ -39,23 +39,23 @@ router.delete('/products/:id', function(req, res, next) {
   });
 });
 
-// router.put('/products/:id', function(req, res, next) {
-//   Candidate.findById(req.params.id, function(err, product){
-//     if(err)
-//     {
-//       return next(err);
-//     }
-//     candidate.upvote++;
-//     candidate.save(function(err){
-//       if(err)
-//       {
-//         return next(err);
-//       }
-//       res.send("success");
-//     })
+router.put('/products/:id', function(req, res, next) {
+  Product.findById(req.params.id, function(err, product){
+    if(err)
+    {
+      return next(err);
+    }
+    product.ordered++;
+    product.save(function(err){
+      if(err)
+      {
+        return next(err);
+      }
+      res.send("success");
+    })
    
-//   });
+  });
 
-// })
+})
 
 module.exports = router;
