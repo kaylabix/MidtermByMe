@@ -12,7 +12,7 @@
             <button ng-click-"addCandidate()">Add Candidate</button>
 
             <h1>Current Candidates</h1>
-            <div ng-repeat="candidate in candidates | orderBy:['-votes','Name"> <!--Basically a for each loop, ordered in decending order by votes first then by Name -->
+            <div ng-repeat="candidate in candidates | orderBy:['-votes','Name'"> <!--Basically a for each loop, ordered in decending order by votes first then by Name -->
                 <span class="glyphicon glyphicon-remove" ng-click="deleteCandidate(candidate)"></span> <!-- ng-click is an onClick listener basically but fancier-->
                 {{candidate.Name}} - votes {{candidate.votes}} <!--Angular knows that stuff in the {{}} are for it to evaluate-->
             </div>
