@@ -15,13 +15,14 @@ router.get('/candidates', function(req, res, next) {
 });
 
 //adding a new candidate to candidates
-router.post('/comments', function(req, res, next) {
+router.post('/candidates', function(req, res, next) {
   var candidate = new Candidates(req.body);
   candidate.save(function(err, candidate){
     if(err)
     {
       return next(err);
     }
+    console.log(candidate);
     res.json(candidate);
   });
 });
