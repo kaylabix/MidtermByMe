@@ -10,8 +10,8 @@ function MainCtrl($scope, $http) //controller
 {
     $scope.getAll = getAll; //Allow all of the folowing functions to be exposed to the html code so html can use the function
     $scope.create = create;
-    // $scope.doVote = doVote;
-    // $scope.upvote = upvote;
+    $scope.addToCart = addToCart;
+    $scope.order = order;
     $scope.addProduct = addProduct;
     $scope.deleteProduct = deleteProduct;
 
