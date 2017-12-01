@@ -36,7 +36,6 @@ router.delete('/candidates/:id', function(req, res, next) {
   console.log(candidateID);
   var candidate = Candidate.findByIdAndRemove(candidateID);
   console.log(candidate);
-  candidate.delete();
 })
 
 
