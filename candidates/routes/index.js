@@ -30,7 +30,7 @@ router.post('/candidates', function(req, res, next) {
 //deleting a candidate
 router.delete('/candidates/:id', function(req, res, next) {
   console.log('in delete');
-  Candidate.remove({_id: req.body.id}, function(err){ 
+  Candidate.remove({_id: req.params.id}, function(err){ 
     if(err)
     {
       return next(err);
