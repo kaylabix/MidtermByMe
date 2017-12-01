@@ -19,6 +19,7 @@ function MainCtrl($scope, $http) //controller
     // //variables
     $scope.products = [];
     $scope.cart = [];
+    $scope.picURL = picURL;
 
     function getAll()  //get Mongoose database, if successful copy the data into the candidates array
     {
