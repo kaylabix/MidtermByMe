@@ -18,13 +18,13 @@ router.get('/candidates', function(req, res, next) {
 router.post('/candidates', function(req, res, next) {
   console.log("in candidate")
   var candidate = new Candidates(req.body);
+  console.log(candidate);
   candidate.save(function(err, candidate){
     if(err)
     {
       console.log("in candidate error");
       return next(err);
     }
-    console.log(candidate);
     res.json(candidate);
   });
 });
