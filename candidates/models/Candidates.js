@@ -6,9 +6,9 @@ var CandidateSchema = new mongoose.Schema({
     upvote: {type: Number, default: 0},
 });
 
-CandidateSchema.methods.upvote = function(cb) {
-    this.upvotes += 1;
-    this.save(cb);
-};
+// CandidateSchema.methods.upvote = function(cb) {
+//     this.upvotes += 1;
+//     this.save(cb);
+// };
 
 mongoose.model('Candidate', CandidateSchema);
