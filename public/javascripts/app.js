@@ -35,7 +35,7 @@ function MainCtrl($scope, $http) //controller
 
     function addToCart() //when click on submit votes, goes through each candidate to see if they have a true selected value (what are the value and key??)
     {
-
+        console.log("inside add to cart");
         $scope.cart = $scope.products.filter(function(product) {
             return product.selected;
         })
