@@ -3,6 +3,7 @@
         <title>Votes</title> <!--Text in the tab-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
         <script src="javascripts/app.js"></script>
+        <script stc="stylesheets/style.css"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         
     </head>
@@ -17,7 +18,7 @@
             </div>
             <button ng-click="addToCart()"> Submit Purchases </button> <!--Click this and doVote() will get called-->
             <h1> Shopping Cart</h1>
-            <div ng-repeat="product in cart |  orderBy:['Name']">  {{product.Name}} - price {{product.price}} {{product.picURL}}</div> <!--For each loop-->
+            <div ng-repeat="product in cart |  orderBy:['Name']">  {{product.Name}} - price {{product.price}} <img class="prodpic" ng-show="product.picURL" ng-src="{{product.picURL}}"></div> <!--For each loop-->
         </div>
     </body>
 </html>
