@@ -66,6 +66,7 @@ function MainCtrl($scope, $http) //controller
     function deleteCandidate(candidate)
     {
         console.log("in delete");
+        console.log(candidate);
         console.log("Deleting Name " + candidate.Name+" ID "+candidate._id);
         $http.delete('/candidates/' + candidate._id)
         .success(function(data){
